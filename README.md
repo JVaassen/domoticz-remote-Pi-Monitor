@@ -6,7 +6,7 @@ If you want to monitor disk usage, look at https://github.com/Xorfor/Domoticz-Di
 ## Prerequisites
 - Only works on Raspberry Pi
 - Requires package python3
-- Requires package python3-lxml
+- Requires package python3-lxml (sudo apt-get install python3-lxml)
 
 ## Parameters
 Address and Port of the Remote Pi need to be entered in the python script and in the Domoticz GUI.
