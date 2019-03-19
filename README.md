@@ -4,16 +4,19 @@ Python plugin to monitor temperature, memory usage, etc. from a Remote Raspberry
 If you want to monitor disk usage, look at https://github.com/Xorfor/Domoticz-Disc-usage-Plugin
 
 ## Prerequisites
-Only works on Raspberry Pi
-Requires package python3
-Requires package lxml
+- Only works on Raspberry Pi
+- Requires package python3
+- Requires package python3-lxml
 
 ## Parameters
 Address and Port of the Remote Pi need to be entered in the python script and in the Domoticz GUI.
 
 ## Instructions
 - Install the python script in /usr/bin on remote server.
-- Install piremotemonitor in /etc/init.d on remote server. Start the server.
+- Install piremotemonitor in /etc/init.d on remote server. 
+- Make both scripts executable : chmod 755 
+- Make the server autostart : sudo update-rc.d piremotemonitor defaults
+
 - Install plugin.py and xfrpimonitor in  ~/domoticz/plugin/PiRemote/. Restart Domoticz and select the plugin in the Hardware screen.
 
 ## Devices
