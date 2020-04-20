@@ -25,6 +25,7 @@ sys.path.append('/usr/lib/python3/dist-packages')
 
 import socket
 import lxml
+from lxml import objectify
 import Domoticz
 import os
 
@@ -159,7 +160,6 @@ class BasePlugin:
             data = sockserv.recv(1024).decode('utf-8')
             Domoticz.Debug('Received from server: ' + str(data))
 
-            from lxml import objectify
 
             tree = objectify.fromstring(str(data))
             #print ("GPU = " + str(tree.GPUTemp.text))
